@@ -1,35 +1,38 @@
 const express = require("express");
+const ejs = require("ejs");
 require("dotenv").config();
 
 app=express();
 app.use(express.static("public/"));
-
+app.set('view engine', 'ejs');
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname+"/index.html");
+    res.render("index.ejs",{
+        display: "display:flex"
+    });
 });
 
 app.get("/index.html",(req,res)=>{
-    res.redirect("/");
+    res.redirect("/",);
 });
 
 app.get("/aboutus.html",(req,res)=>{
-    res.sendFile(__dirname+"/aboutus.html");
+    res.render("aboutus.ejs");
 });
 
 app.get("/asusrog.html",(req,res)=>{
-    res.sendFile(__dirname+"/asusrog.html");
+    res.render("asusrog.ejs");
 });
 
 app.get("/contactus.html",(req,res)=>{
-    res.sendFile(__dirname+"/contactus.html");
+    res.render("contactus.ejs");
 });
 
 app.get("/realmex7.html",(req,res)=>{
-    res.sendFile(__dirname+"/realmex7.html");
+    res.render("realmex7.ejs");
 });
 
 app.get("/tesla.html",(req,res)=>{
-    res.sendFile(__dirname+"/tesla.html");
+    res.render("tesla.ejs");
 });
 
 
