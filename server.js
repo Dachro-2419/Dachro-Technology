@@ -31,8 +31,8 @@ app.get("/realmex7.html",(req,res)=>{
     res.render("realmex7.ejs");
 });
 
-app.get("/tesla.html",(req,res)=>{
-    res.render("tesla.ejs");
+app.get("/RealmeX3.html",(req,res)=>{
+    res.render("RealmeX3.ejs");
 });
 
 
